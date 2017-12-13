@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo Firebase</title>
+</head>
+<body>
+
+	<input type="text" placeholder="Data..." id="data">
+
+	<button onclick="dataAdd()">Submit</button>
+
+	<script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyCFR_jQrl3Q2kY9AKG01n8iVi6Q3gHB6J8",
+	    authDomain: "fir-f4acd.firebaseapp.com",
+	    databaseURL: "https://fir-f4acd.firebaseio.com",
+	    projectId: "fir-f4acd",
+	    storageBucket: "fir-f4acd.appspot.com",
+	    messagingSenderId: "478508145084"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+
+	<script type="text/javascript">
+		function dataAdd() {
+			var data = document.getElementById('data').value;
+			var db = firebase.auth();
+			var pass = "password";
+
+			db.createUserWithEmailAndPassword(data,pass)
+			.then(function(usr) {
+				console.log("user created");
+			});
+		}
+	</script>
+
+</body>
+</html>

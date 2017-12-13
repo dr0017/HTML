@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body {
+			color: red;
+		} 
+		td {
+			color: black;
+		}
+		button {
+			color: white;
+			background-color: blue;
+		}
+		#h {
+			margin: 20px;
+		}
+	</style>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  <!--links for getmdl.io-->
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"> <!--links for getmdl.io-->
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>  <!--links for getmdl.io-->
+</head>
+<body>
+	<h1 id="h1"><b><i>LogIn Page</i></b></h1>
+	<table>
+		<tr>
+			<td>Email</td>
+			<td>:</td>
+			<td><div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="text" id="sample2">
+    <label class="mdl-textfield__label" for="sample1">Email...</label>
+  </div></td>
+		</tr>
+		<tr>
+			<td>Password</td>
+			<td>:</td>
+			<td><div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="password" id="sample1">
+    <label class="mdl-textfield__label" for="sample1">Password...</label>
+  </div></td>
+		</tr>
+	</table>
+	<br>
+	<button id="h" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="fun()">  
+  		Button
+	</button>
+	<script type="text/javascript"> //getmdl.io's use to make button more relaistic 
+		function fun() {
+			var usr = document.getElementById('sample2').value;  // getting value 
+			var pass = document.getElementById('sample1').value;
+			
+			document.getElementById('set').innerHTML = usr;  //to add data to p tag 
+			document.getElementById('setone').innerHTML = pass;
+
+			document.getElementById('h1').style.color = "orange";
+		}
+	</script>
+	<p id="set"></p>
+	<p id="setone"></p>
+</body>
+</html>
